@@ -13,7 +13,7 @@
       ga('send', 'pageview');
     
     </script>
-    <script src="//www.google-analytics.com/cx/api.js?experiment=-W7CHPU_RqWWIIHJb20kKA"></script>
+    <script src="//www.google-analytics.com/cx/api.js?experiment=JJiBR0mBR9ianBUORDzm4w"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script>
       var chosenVariation = cxApi.chooseVariation();
@@ -22,6 +22,9 @@
         function() {},  // Original: Proper
         function() {    // Variation 1: Bang
             document.getElementById('order').innerHTML = 'Bang out of order';
+        },
+        function() {    // Variation 2: Proper
+            document.getElementById('order').innerHTML = 'Proper out of order';
         }
       ];
     
