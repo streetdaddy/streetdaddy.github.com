@@ -13,8 +13,24 @@
       ga('send', 'pageview');
     
     </script>
+    <script src="//www.google-analytics.com/cx/api.js?experiment=-W7CHPU_RqWWIIHJb20kKA"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+      var chosenVariation = cxApi.chooseVariation();
+      
+      var pageVariations = [
+        function() {},  // Original: Proper
+        function() {    // Variation 1: Bang
+            document.getElementById('order').innerHTML = 'Bang out of order';
+        }
+      ];
+    
+      $(document).ready(
+        pageVariations[chosenVariation]
+      );
+    </script>
 </head>
 <body>
-    <h1>Proper out of order</h1>
+    <h1 id="order">Proper out of order</h1>
 </body>
 </html>
